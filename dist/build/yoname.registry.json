@@ -1,0 +1,25 @@
+{
+  "namespace": "yoname",
+  "components": [
+    [
+      "YO-NAME",
+      "yo-name",
+      {
+        "$": "yo-name"
+      },
+      [
+        [
+          "first",
+          1
+        ],
+        [
+          "last",
+          1
+        ]
+      ]
+    ]
+  ],
+  "loader": "yoname.js",
+  "core": "yoname/yoname.core.js",
+  "corePolyfilled": "yoname/yoname.core.pf.js"
+}
