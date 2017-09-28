@@ -212,7 +212,6 @@ var CustomInputComponent = (function () {
         configurable: true
     });
     CustomInputComponent.prototype.writeValue = function (value) {
-        console.log('writevalue', value);
         this.value = value;
     };
     CustomInputComponent.prototype.registerOnChange = function (fn) {
