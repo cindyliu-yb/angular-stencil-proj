@@ -38,7 +38,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<!--The content below is only a placeholder and can be replaced.-->\n<div style=\"text-align:center\">\n  <h1>\n    Welcome to {{title}}!\n  </h1>\n  <img width=\"300\" src=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==\">\n</div>\n<yo-name first=\"Stencil\" last=\"JS\"></yo-name>\n"
+module.exports = "<!--The content below is only a placeholder and can be replaced.-->\n<div style=\"text-align:center\">\n  <h1>\n    Welcome to {{title}}!\n  </h1>\n  <img width=\"300\" src=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==\">\n</div>\n<!-- <yo-name first=\"Stencil\" last=\"JS\"></yo-name> -->\n\n\n<h3><i>Just a FormControl</i></h3>\n<form [formGroup]=\"heroForm\" novalidate>\n  <div class=\"form-group\">\n    <label class=\"center-block\">Name:\n       <app-custom-input [formControl]=\"name\"></app-custom-input> \n       <!-- <input class=\"form-control\" formControlName=\"name\">  -->\n    </label>\n  </div>\n  <!-- <div formGroupName=\"address\" class=\"well well-lg\">\n    <h4>Secret Lair</h4>\n    <div class=\"form-group\">\n      <label class=\"center-block\">Street:\n        <input class=\"form-control\" formControlName=\"street\">\n      </label>\n    </div>\n    <div class=\"form-group\">\n      <label class=\"center-block\">City:\n        <input class=\"form-control\" formControlName=\"city\">\n      </label>\n    </div>\n    <div class=\"form-group\">\n      <label class=\"center-block\">State:\n        <select class=\"form-control\" formControlName=\"state\">\n          <option *ngFor=\"let state of states\" [value]=\"state\">{{state}}</option>\n        </select>\n      </label>\n    </div>\n    <div class=\"form-group\">\n      <label class=\"center-block\">Zip Code:\n        <input class=\"form-control\" formControlName=\"zip\">\n      </label>\n    </div>\n  </div> -->\n</form>\n\n<p>Form value: {{ heroForm.value | json }}</p>\n<p>Form status: {{ heroForm.status | json }}</p>\n\n\n<!-- <input [value]='name' (input)=\"name=$event\"> -->"
 
 /***/ }),
 
@@ -48,16 +48,29 @@ module.exports = "<!--The content below is only a placeholder and can be replace
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__("../../../forms/@angular/forms.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__data_model__ = __webpack_require__("../../../../../src/app/data-model.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
 
 var AppComponent = (function () {
-    function AppComponent() {
+    function AppComponent(fb) {
+        this.fb = fb;
         this.title = 'app';
+        this.name = new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["b" /* FormControl */](__WEBPACK_IMPORTED_MODULE_2__data_model__["a" /* heroes */][0].name, null);
+        // this.createForm();
+        this.heroForm = this.fb.group({
+            name: this.name
+        });
     }
     return AppComponent;
 }());
@@ -66,9 +79,11 @@ AppComponent = __decorate([
         selector: 'app-root',
         template: __webpack_require__("../../../../../src/app/app.component.html"),
         styles: [__webpack_require__("../../../../../src/app/app.component.css")]
-    })
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_forms__["a" /* FormBuilder */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_forms__["a" /* FormBuilder */]) === "function" && _a || Object])
 ], AppComponent);
 
+var _a;
 //# sourceMappingURL=app.component.js.map
 
 /***/ }),
@@ -80,13 +95,18 @@ AppComponent = __decorate([
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__("../../../platform-browser/@angular/platform-browser.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__("../../../forms/@angular/forms.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__custom_input_custom_input_component__ = __webpack_require__("../../../../../src/app/custom-input/custom-input.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
+
 
 
 
@@ -98,18 +118,184 @@ var AppModule = (function () {
 AppModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["L" /* NgModule */])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__app_component__["a" /* AppComponent */]
+            __WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* AppComponent */],
+            __WEBPACK_IMPORTED_MODULE_4__custom_input_custom_input_component__["a" /* CustomInputComponent */]
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */]
+            __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
+            __WEBPACK_IMPORTED_MODULE_2__angular_forms__["c" /* FormsModule */],
+            __WEBPACK_IMPORTED_MODULE_2__angular_forms__["e" /* ReactiveFormsModule */]
         ],
         providers: [],
-        bootstrap: [__WEBPACK_IMPORTED_MODULE_2__app_component__["a" /* AppComponent */]],
+        bootstrap: [__WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* AppComponent */]],
         schemas: [__WEBPACK_IMPORTED_MODULE_1__angular_core__["i" /* CUSTOM_ELEMENTS_SCHEMA */]]
     })
 ], AppModule);
 
 //# sourceMappingURL=app.module.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/custom-input/custom-input.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/custom-input/custom-input.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "   <form-input-base [value]=\"value\" (valueChange)=\"onValueChange($event)\"></form-input-base>    \n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/custom-input/custom-input.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* unused harmony export CUSTOM_INPUT_VALUE_ACCESSOR */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CustomInputComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__("../../../forms/@angular/forms.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var CUSTOM_INPUT_VALUE_ACCESSOR = {
+    provide: __WEBPACK_IMPORTED_MODULE_1__angular_forms__["d" /* NG_VALUE_ACCESSOR */],
+    useExisting: Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_21" /* forwardRef */])(function () { return CustomInputComponent; }),
+    multi: true
+};
+var noop = function () { };
+var CustomInputComponent = (function () {
+    function CustomInputComponent(cd) {
+        this.cd = cd;
+        /** Callback registered via registerOnTouched (ControlValueAccessor) */
+        this._onTouchedCallback = noop;
+        /** Callback registered via registerOnChange (ControlValueAccessor) */
+        this._onChangeCallback = noop;
+        /** @internal */
+        this._value = '';
+    }
+    Object.defineProperty(CustomInputComponent.prototype, "value", {
+        /** @internal */
+        get: function () {
+            return this._value;
+        },
+        set: function (v) {
+            if (v !== this._value) {
+                this._value = v;
+                this._onChangeCallback(v);
+                this.cd.markForCheck();
+            }
+        },
+        enumerable: true,
+        configurable: true
+    });
+    CustomInputComponent.prototype.writeValue = function (value) {
+        console.log('writevalue', value);
+        this.value = value;
+    };
+    CustomInputComponent.prototype.registerOnChange = function (fn) {
+        this._onChangeCallback = fn;
+    };
+    CustomInputComponent.prototype.registerOnTouched = function (fn) {
+        this._onTouchedCallback = fn;
+    };
+    CustomInputComponent.prototype.onValueChange = function (ev) {
+        this.value = ev.target.value;
+    };
+    return CustomInputComponent;
+}());
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
+    __metadata("design:type", Object),
+    __metadata("design:paramtypes", [Object])
+], CustomInputComponent.prototype, "value", null);
+CustomInputComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+        selector: 'app-custom-input',
+        template: __webpack_require__("../../../../../src/app/custom-input/custom-input.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/custom-input/custom-input.component.css")],
+        providers: [CUSTOM_INPUT_VALUE_ACCESSOR]
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["k" /* ChangeDetectorRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["k" /* ChangeDetectorRef */]) === "function" && _a || Object])
+], CustomInputComponent);
+
+var _a;
+//# sourceMappingURL=custom-input.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/data-model.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* unused harmony export Hero */
+/* unused harmony export Address */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return heroes; });
+/* unused harmony export states */
+var Hero = (function () {
+    function Hero() {
+        this.id = 0;
+        this.name = '';
+    }
+    return Hero;
+}());
+
+var Address = (function () {
+    function Address() {
+        this.street = '';
+        this.city = '';
+        this.state = '';
+        this.zip = '';
+    }
+    return Address;
+}());
+
+var heroes = [
+    {
+        id: 1,
+        name: 'Whirlwind',
+        addresses: [
+            { street: '123 Main', city: 'Anywhere', state: 'CA', zip: '94801' },
+            { street: '456 Maple', city: 'Somewhere', state: 'VA', zip: '23226' },
+        ]
+    },
+    {
+        id: 2,
+        name: 'Bombastic',
+        addresses: [
+            { street: '789 Elm', city: 'Smallville', state: 'OH', zip: '04501' },
+        ]
+    },
+    {
+        id: 3,
+        name: 'Magneta',
+        addresses: []
+    },
+];
+var states = ['CA', 'MD', 'OH', 'VA'];
+//# sourceMappingURL=data-model.js.map
 
 /***/ }),
 
@@ -144,7 +330,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 if (__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].production) {
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_19" /* enableProdMode */])();
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_20" /* enableProdMode */])();
 }
 Object(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_2__app_app_module__["a" /* AppModule */])
     .catch(function (err) { return console.log(err); });

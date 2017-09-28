@@ -1,0 +1,25 @@
+{
+  "namespace": "forminputbase",
+  "components": [
+    [
+      "FORM-INPUT-BASE",
+      "9gxjmigk",
+      {
+        "$": "g4rb5zl8"
+      },
+      [
+        [
+          "type",
+          1
+        ],
+        [
+          "value",
+          2
+        ]
+      ]
+    ]
+  ],
+  "loader": "forminputbase.js",
+  "core": "forminputbase/forminputbase.hzldpbl7.js",
+  "corePolyfilled": "forminputbase/forminputbase.jrmprzsd.pf.js"
+}
