@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --delete-output-path false --output-path dist",
+    "start": "ng serve --delete-output-path false --output-path dist --port 4300",
     "build": "ng build --delete-output-path false",
     "test": "ng test",
     "lint": "ng lint",
