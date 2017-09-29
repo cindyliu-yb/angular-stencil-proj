@@ -2,9 +2,6 @@
 
 # compiled output
 # /dist
-/dist/index.html
-/dist/*.map
-/dist/*.js
 /tmp
 /out-tsc
 
