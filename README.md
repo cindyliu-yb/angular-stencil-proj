@@ -2,7 +2,7 @@
 
 Install the node_modules
 ```
-npm run build
+npm install
 ```
 
 Run the project at http://0.0.0.0:9090
