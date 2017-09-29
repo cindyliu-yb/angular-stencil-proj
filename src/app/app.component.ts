@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectorRef } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
 import { Address, heroes, states } from './data-model';
 
@@ -12,29 +12,33 @@ export class AppComponent {
 
   heroForm: FormGroup;
 
-  name = new FormControl(heroes[0].name, null);
+  fieldControls: any = {};
 
-  constructor(private fb: FormBuilder) {
-    // this.createForm();
-    this.heroForm = this.fb.group({
-      name: this.name
-    });
+  fields = [
+    {label: 'name', type: 'text', controlName: 'name'},
+    {label: 'Street', type: 'text', controlName: 'street'},
+    {label: 'City', type: 'text', controlName: 'city'},
+    {label: 'State', type: 'select', controlName: 'state'},
+    {label: 'Zip', type: 'number', controlName: 'zip'}
+  ];
+
+  constructor(private fb: FormBuilder, private cd: ChangeDetectorRef) {
+    this.createForm();
   }
 
-  // createForm() {
-  //   this.heroForm = this.fb.group({
-  //     name: ['', Validators.required],
-  //     address: this.fb.group({ // <-- the child FormGroup
-  //       street: '',
-  //       city: '',
-  //       state: '',
-  //       zip: ''
-  //     })
-  //   });
+  createForm() {
+    this.fields.forEach((f) => {
+      this.fieldControls[f.controlName] = new FormControl();
+    });
 
-  //   this.heroForm.setValue({
-  //     name:    heroes[0].name,
-  //     address: heroes[0].addresses[0] || new Address()
-  //   });
-  // }
+    this.heroForm = this.fb.group(this.fieldControls);
+
+    this.fieldControls.name.setValue(heroes[0].name);
+
+    this.cd.markForCheck();
+  }
+
+  getControl(controlName: string) {
+    return this.fieldControls[controlName];
+  }
 }

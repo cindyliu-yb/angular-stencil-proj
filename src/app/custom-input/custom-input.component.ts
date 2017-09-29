@@ -18,6 +18,9 @@ const noop = () => { };
 })
 export class CustomInputComponent implements ControlValueAccessor {
 
+  @Input() label: string;
+  @Input() type: string;
+
   /** Callback registered via registerOnTouched (ControlValueAccessor) */
   protected _onTouchedCallback: () => void = noop;
   /** Callback registered via registerOnChange (ControlValueAccessor) */

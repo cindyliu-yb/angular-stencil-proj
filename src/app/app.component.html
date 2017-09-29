@@ -1,48 +1,18 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
-  <h1>
-    Welcome to {{title}}!
-  </h1>
-  <img width="300" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+  <img width="100" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
 </div>
 <!-- <yo-name first="Stencil" last="JS"></yo-name> -->
 
 
-<h3><i>Just a FormControl</i></h3>
+<h3><i>Form with Stencil Form Inputs</i></h3>
 <form [formGroup]="heroForm" novalidate>
-  <div class="form-group">
-    <label class="center-block">Name:
-       <app-custom-input [formControl]="name"></app-custom-input> 
-       <!-- <input class="form-control" formControlName="name">  -->
-    </label>
-  </div>
-  <!-- <div formGroupName="address" class="well well-lg">
-    <h4>Secret Lair</h4>
-    <div class="form-group">
-      <label class="center-block">Street:
-        <input class="form-control" formControlName="street">
-      </label>
-    </div>
-    <div class="form-group">
-      <label class="center-block">City:
-        <input class="form-control" formControlName="city">
-      </label>
-    </div>
-    <div class="form-group">
-      <label class="center-block">State:
-        <select class="form-control" formControlName="state">
-          <option *ngFor="let state of states" [value]="state">{{state}}</option>
-        </select>
-      </label>
-    </div>
-    <div class="form-group">
-      <label class="center-block">Zip Code:
-        <input class="form-control" formControlName="zip">
-      </label>
-    </div>
-  </div> -->
+    <ng-template ngFor let-field [ngForOf]="fields">
+      <app-custom-input [label]="field.label" [type]="field.type" [formControl]="getControl(field.controlName)"></app-custom-input>
+    </ng-template>
 </form>
 
+<h3><i>Form Infos</i></h3>
 <p>Form value: {{ heroForm.value | json }}</p>
 <p>Form status: {{ heroForm.status | json }}</p>
 

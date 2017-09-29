@@ -1,1 +1,14 @@
-   <form-input-base [value]="value" (valueChange)="onValueChange($event)"></form-input-base>    
+
+<div class="form-group" [ngSwitch]="type">
+  <label class="center-block">{{label}}: 
+    <ng-template ngSwitchCase="select">
+          <select class="form-control">
+            <option *ngFor="let state of states" [value]="state">{{state}}</option>
+          </select>
+    </ng-template>  
+    <ng-template ngSwitchDefault>
+      <form-input-base [value]="value" (valueChange)="onValueChange($event)"></form-input-base>
+    </ng-template>  
+  </label>
+</div>
+
